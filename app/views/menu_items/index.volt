@@ -1,11 +1,13 @@
 
   {{ assets.outputCss() }}
     {{ assets.outputJs() }}
-{{partial('partials/nav')}}
-<div class="page-header" >
-<h2>Sign up using this form</h2>
 
-<?php echo $this->tag->form("signup/register"); ?>
+ {{partial('partials/nav')}}
+<div class="page-header" >
+
+<h2>Add New Menu Items</h2>
+
+<?php echo $this->tag->form("menu_items/update"); ?>
 
  <p>
     <label for="name">Name</label>
@@ -13,12 +15,12 @@
  </p>
 
  <p>
-    <label for="email">E-Mail</label>
-    <?php echo $this->tag->textField("email") ?>
+    <label for="link">Link</label>
+    <?php echo $this->tag->textField("link") ?>
  </p>
 
  <p>
-    <?php echo $this->tag->submitButton("Register") ?>
+    <?php echo $this->tag->submitButton("Update") ?>
  </p>
 
 </form>

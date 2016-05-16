@@ -1,0 +1,30 @@
+.nav_menu
+{
+	border-style:solid;
+	border-color:green;
+	margin-top:50px;
+	margin-left:5px;
+	width:125px;
+}
+.nav_menu  li
+{
+	border-style:solid;
+	border-color:blue;
+	list-style-type: none;
+	margin-left:-40px;
+	padding:2px;
+}
+
+.page-header
+{
+	margin-top:-135px;
+	margin-left:150px;
+}
+
+
+.footer
+{
+	
+	margin-top:30px;
+	margin-left:5px;
+}

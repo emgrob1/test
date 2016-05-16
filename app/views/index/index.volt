@@ -1,9 +1,21 @@
 
-{{linkTo ('menu')}}
 
-<div class="page-header">
+  {{ assets.outputCss() }}
+    {{ assets.outputJs() }}
+
+{{partial('partials/nav')}}
+{{partial('partials/header')}}
+
+
+
+<div class="page-header" >
     <h1>Hello</h1>
-</div>
+
 
 {{linkTo('signup','Sign Up Here!')}}
 
+</div>
+
+<div class="footer">
+{{partial('partials/footer')}}
+</div>

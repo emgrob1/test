@@ -1,12 +1,11 @@
 <?php
 
-class SignupController extends \Phalcon\Mvc\Controller
+class MenuItemsController extends \Phalcon\Mvc\Controller
 {
 
     public function indexAction()
     {
     	
-		
 			$this->assets
     	->addCss('css/style.css');
 		
@@ -15,19 +14,19 @@ class SignupController extends \Phalcon\Mvc\Controller
 		->addJs('js/tools.js');
 		
 		
-$this->view->signup = MenuItems::find();
+		
+		
+		$this->view->menu_items = MenuItems::find();
+		$this->view->signup = MenuItems::find();
     }
-
-	   public function registerAction()
-    {
-
-        $user = new Users();
-
-        // Store and check for errors
-        $success = $user->save($this->request->getPost(), array('name', 'email'));
-
-        if ($success) {
-            echo "Thanks for registering!";
+	
+	public function updateAction()
+	{
+		$menuitems = new MenuItems();
+		
+		$success = $menuitems->save($this->request->getPost(), array('name','link'));
+		 if ($success) {
+            echo "The menu has been updated";
         } else {
             echo "Sorry, the following problems were generated: ";
             foreach ($user->getMessages() as $message) {
@@ -36,6 +35,8 @@ $this->view->signup = MenuItems::find();
         }
 
         $this->view->disable();
-    }
+    
+	}
+
 }
 
